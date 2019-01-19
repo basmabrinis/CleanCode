@@ -44,8 +44,6 @@ namespace CleanCode
         private static void SecondSolution()
         {
             object message = new MessageC();
-            var t = message.GetType();
-
             switch (message.GetType().Name)
             {
                 case "MessageA":
