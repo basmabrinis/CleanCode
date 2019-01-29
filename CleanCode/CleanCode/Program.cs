@@ -12,23 +12,15 @@
         /// </summary>
         /// <returns>string value</returns>
         string MyCustomMethod();
-    }
 
-    /// <summary>
-    /// ExtendClass class
-    /// </summary>
-    public static class ExtendClass
-    {
         /// <summary>
         /// SomeAdditionalMethod Method
         /// </summary>
-        /// <param name="message">IMessage message</param>
-        /// <returns>string value</returns>
-        public static string SomeAdditionalMethod(this IMessage message)
-        {
-            return "Hello SomeAdditionalMethod On class extentions!";
-        }
+        /// <returns></returns>
+        string SomeAdditionalMethod();
+        
     }
+
 
     /// <summary>
     /// MessageA class
@@ -42,6 +34,15 @@
         public string MyCustomMethod()
         {
             return "Hello MyCustomMethod On class MessageA!";
+        }
+
+        /// <summary>
+        /// SomeAdditionalMethod Method
+        /// </summary>
+        /// <returns></returns>
+        public string SomeAdditionalMethod()
+        {
+            return string.Empty;
         }
     }
 
@@ -58,6 +59,15 @@
         {
             return "Hello MyCustomMethod On class MessageB!";
         }
+
+        /// <summary>
+        /// SomeAdditionalMethod Method
+        /// </summary>
+        /// <returns></returns>
+        public string SomeAdditionalMethod()
+        {
+            return "Hello SomeAdditionalMethod On class MessageB!";
+        }
     }
 
     /// <summary>
@@ -72,6 +82,15 @@
         public string MyCustomMethod()
         {
             return "Hello MyCustomMethod On class MessageC!";
+        }
+
+        /// <summary>
+        /// SomeAdditionalMethod Method
+        /// </summary>
+        /// <returns></returns>
+        public string SomeAdditionalMethod()
+        {
+            return string.Empty;
         }
     }
 
@@ -102,7 +121,7 @@
         {
             try
             {
-                object message = new MessageA();
+                object message = new MessageB();
                 var resultValues = string.Empty;
 
                 if (message is MessageA)
